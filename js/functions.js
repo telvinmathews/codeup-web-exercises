@@ -90,7 +90,9 @@ console.log(calculateTip(0.15, 33.42))
  */
 
 var bill_total = parseInt(prompt("What is the total bill amout? "));
-var user_tip_amount = parseInt(prompt("What is the amount that you want to tip? "));
+var user_tip_amount = parseFloat(prompt("What is the amount that you want to tip? "));
+var tip_amount = bill_total * user_tip_amount;
+alert(tip_amount.toFixed(2));
 
 
 /**
@@ -107,3 +109,8 @@ var user_tip_amount = parseInt(prompt("What is the amount that you want to tip? 
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+
+function applyDiscount(price, discountPercent) {
+    var result = price * discountPercent - price;
+    return result;
+}
