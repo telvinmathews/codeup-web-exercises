@@ -5,40 +5,49 @@
     <title>Register With Us</title>
 </head>
 <body>
+
 <form method="POST" action="https://request-inspector.glitch.me/">
 
   <label for="email">Email</label>
   <input id="email" name="email" type="text">
+
   <br>
 
   <label for="password">Password</label>
   <input id="password" name="password" type="password">
+
+  <br>
+  <label for="bio">Bio</label>
+  <textarea id="bio" name="Biofield"></textarea>
+
   <br>
 
-  <textarea name="bio"></textarea>
-  <br>
-
+  <section>
   <p>How did you hear about us?</p>
-  <label for="billboard">billboard</label>
-  <input id="billboard" type="radio" name="1" value="billboard"><br>
+  <label for="billboard"></label>
+  <input id="billboard" type="radio" name="1" value="billboard">billboard<br>
 
-  <label for="radio advertisement">radio advertisement</label>
-  <input id="radio advertisement" type="radio" name="1" value="radio advertisement"><br>
+  <label for="radio advertisement"></label>
+  <input id="radio advertisement" type="radio" name="1" value="radio advertisement">radio advertisement<br>
 
-  <label for="internet advertisement">internet advertisement</label>
-  <input id="internet advertisement" type="radio" name="1" value="internet advertisement"><br>
+  <label for="internet advertisement"></label>
+  <input id="internet advertisement" type="radio" name="1" value="internet advertisement">internet advertisement<br>
 
-  <label for="other">other</label>
-  <input id="other" type="radio" name="1" value="other"><br>
+  <label for="other"></label>
+  <input id="other" type="radio" name="1" value="other">other<br>
+  </section>
 
   <label for="browser">What web browser are you using:</label>
 
   <select name="browser" id="browser">
-    <option value="chrome">Chrome</option>
-    <option value="fire fox">Fire fox</option>
-    <option value="Duck">Duck</option>
-    <option value="opera">Opera</option>
+    <option id="chrome" value="chrome">Chrome</option>
+    <option id="firefox" value="firefox">Firefox</option>
+    <option id="duck" value="Duck">Duck</option>
+    <option id="Opera" value="opera">Opera</option>
   </select>
+
+  <br>
+
   <input type="submit">
 </form>
 </body>
