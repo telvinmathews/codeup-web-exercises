@@ -98,5 +98,29 @@ a {
     color: var(--main-link-color);
 }
 .container {
+    margin: 1em;
+}
 
+.media {
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image {
+    float: left;
+    width: 50px;
+    margin-top: 1.33em;
+}
+.media-body {
+    float: left;
+    width: calc(100% - 50);
+}
+.profile-items {
+    padding: unset;
+}
+.profile-entry {
+    margin: .5em;
+    list-style: none;
 }
