@@ -1,0 +1,22 @@
+/*.navbar-collapse {*/
+/*    flex-grow: unset;*/
+/*}*/
+
+.jumbotron {
+    background: url("../img/pizza.png");
+}
+
+h1  {
+    color: rgba(0, 0, 0, 0.55);
+    background: rgba(255, 253, 253, 0.68) 20px;
+    align-self: center;
+}
+
+.display-4 {
+
+}
+
+img {
+    width: 930px;
+    height: 446px;
+}
