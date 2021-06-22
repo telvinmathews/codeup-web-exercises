@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/order_pizza.css">
     <title>Hello, world!</title>
 </head>
+
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Pizza World</a>
@@ -48,17 +49,23 @@
 
 <h2>Build your own pizza!</h2>
 
-<ul class="nav nav-tabs">
-    <li class="nav-item badge badge-light">
-        <a class="nav-link active" href="#"><span class="badge badge-secondary">1</span> Size and crust</a>
+<ul class="nav nav-tabs" id="myTab" role="tablist" role="presentation">
+    <li class="nav-item badge badge-light" role="presentation">
+        <a class="nav-link active" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary">1</span> Size and crust</a>
     </li>
     <li class="nav-item badge badge-light">
-        <a class="nav-link" href="#"><span class="badge badge-secondary">2</span> Cheese and Sauce</a>
+        <a class="nav-link" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary" data-toggle="tab">2</span> Cheese and Sauce</a>
     </li>
     <li class="nav-item badge badge-light">
-        <a class="nav-link" href="#"><span class="badge badge-secondary">3</span> Toppings</a>
+        <a class="nav-link"data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><span class="badge badge-secondary">3</span> Toppings</a>
     </li>
 </ul>
+
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+</div>
 
 <div>
     <div class="card text-white card-header bg-primary mb-3">
@@ -105,9 +112,10 @@
     </div>
 
     <div class="card-footer text-right">
-        <button type="button" class="btn btn-primary">Next Step ></button>
+        <button type="button" class="btn btn-primary"><a href="./cheese_and_sauce.html">Next Step ></a></button>
     </div>
 </div>
+
 <div>
     <div class="card text-white card-header bg-primary mb-3">
         Choose Cheese and Sauce
@@ -157,8 +165,8 @@
     </div>
 
     <div class="card-footer text-right">
-        <button type="button" class="btn btn-primary">< Previous Step</button>
-        <button type="button" class="btn btn-primary">Next Step ></button>
+        <button type="button" class="btn btn-primary"><a href="">< Previous Step</a></button>
+        <button type="button" class="btn btn-primary"><a href="">Next Step ></a></button>
     </div>
 
 </div>
@@ -214,7 +222,7 @@
     </div>
 
     <div class="card-footer text-right">
-        <button type="button" class="btn btn-primary">Checkout</button>
+        <button type="button" class="btn btn-primary"><i class="bi-cart"></i>Checkout</button>
     </div>
 
 </div>
