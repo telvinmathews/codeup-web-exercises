@@ -1,4 +1,3 @@
-// TODO: Create a function named countSpaces that accepts a string and returns the total number of spaces in the string.
 
 function countSpaces(str) {
     var spaces = 0;
@@ -14,5 +13,10 @@ function countSpaces(str) {
     return spaces;
 }
 var result = countSpaces(' hakvbh njl  jalbxd');
+var result2 = countSpaces(' bkha bjd');
+var result3 = countSpaces('');
+var result4 = countSpaces(' hjhb bjb jbj ');
 console.log(result);
-// TODO: Add validation to function above, if the argument pass is not a string it should return false.
+console.log(result2);
+console.log(result3);
+console.log(result4);
