@@ -26,10 +26,10 @@
 // TODO: Create a function named capitalizeAllNames that accepts an array of strings and returns the array with all of its elements capitalized.
 // Example:  capitalizeAllNames(["bob","Seth","TOFU","Toyota"]) ---- returns ----> ["BOB","SETH","TOFU","TOYOTA"]
 function capitalizeAllNames(arrayOfStrings) {
-    for (let i = 0; i < arrayOfStrings; i++) {
-        arrayOfStrings[i].toUpperCase();
-        console.log(arrayOfStrings);
+    for (let i = 0; i < arrayOfStrings.length; i++) {
+       arrayOfStrings = arrayOfStrings[i].toUpperCase();
     }
+    console.log(arrayOfStrings);
 }
 capitalizeAllNames(['bill','bob', 'jack']);
 
