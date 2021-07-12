@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Oh</h1>
+<h1 id="firstH1">Oh</h1>
 <p>Hello people!</p>
 <p>My name is Blank</p>
 <p>This is a test!</p>
@@ -70,6 +70,27 @@
 //         liTag.css('font-size': '100px');
 
 //-----------Event Listeners--------//
+
+        function changeBackgroundColor(event) {
+            $(this).css('background-color', '#FF0');
+            $(this).css('color', '#ff0000');
+        }
+
+        function changeFontSize(event) {
+            $(this).css({'font-size': '18px'})
+        }
+
+        function hoverIn(event) {
+            $(this).css({'color': '#ff0000'})
+        }
+
+        function hoverOut(event) {
+            $(this).css({'color': '#000000'})
+        }
+
+        $('#firstH1').click(changeBackgroundColor)
+        $('p').dblclick(changeFontSize)
+        $('li').hover(hoverIn, hoverOut)
 
 
 
