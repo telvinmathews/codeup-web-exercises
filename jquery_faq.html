@@ -2,9 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Jquery FAQ</title>
 </head>
 <body>
+<style>
+
+    .invisible {
+        visibility: hidden;
+    }
+
+</style>
+
+<p>Cryptids of Cornwall:</p>
+
+<dl>
+    <dt>Beast of Bodmin</dt>
+    <dd>A large feline inhabiting Bodmin Moor.</dd>
+
+    <dt>Morgawr</dt>
+    <dd>A sea serpent.</dd>
+
+    <dt>Owlman</dt>
+    <dd>A giant owl-like creature.</dd>
+
+    <button class="button button1">On</button>
+    <button class="button button2">Off</button></dl>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+        let ddElements = $('dd');
+        let onButton = $('.button1')
+        let offButton = $('.button2')
+        let dtElements = $('dt');
+
+
+        function toggleEvent(event) {
+            $('dd').addClass('invisible');
+        }
+        function toggleEventTwo(event) {
+            $('dd').removeClass();
+        }
+
+
+
+
+
+        // ddElements.click(toggleEvent);
+        onButton.click(toggleEventTwo);
+        offButton.click(toggleEvent);
+
+
+    });
+
+</script>
 
 </body>
 </html>
