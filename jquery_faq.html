@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Jquery FAQ</title>
+    <style>
+
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
 </head>
 <body>
-<style>
 
-    .invisible {
-        visibility: hidden;
-    }
-
-</style>
 
 <p>Cryptids of Cornwall:</p>
 
@@ -26,16 +27,53 @@
     <dd>A giant owl-like creature.</dd>
 
     <button class="button button1">On</button>
-    <button class="button button2">Off</button></dl>
+    <button class="button button2">Off</button>
+</dl>
+
+<h1>Parks List</h1>
+<h3>National Parks</h3>
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<h3>State Parks of Alabama</h3>
+<ul id="state-parks-alabama">
+    <li>Gulf State Park</li>
+    <li>Cheaha State Park</li>
+    <li>Choke Canyon</li>
+    <li>DeSoto State Park</li>
+    <li>Oak Mountain State Park</li>
+</ul>
+
+<button id="yellow-button">Yellow background</button>
+
+
+
+
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     "use strict";
 
     $(document).ready(function () {
         let ddElements = $('dd');
-        let onButton = $('.button1')
-        let offButton = $('.button2')
+        let onButton = $('.button1');
+        let offButton = $('.button2');
         let dtElements = $('dt');
+        let liBackGroundButton = $('#yellow-button');
+        let listOfLiElements = $('ul > li');
+        let h3Element = $('h3');
+        let liElement = $('li')
 
 
         function toggleEvent(event) {
@@ -43,6 +81,19 @@
         }
         function toggleEventTwo(event) {
             $('dd').removeClass();
+        }
+        function changeLiBackGround(event) {
+            listOfLiElements.each(function (index, element) {
+                $(this).css({"background-color": "yellow"})
+            });
+        }
+
+        function boldLiElements(selector) {
+            $('ul').children().css({"font-weight": "bold"});
+        }
+
+        function changeParentColor() {
+            $('li').first().css({"color": "blue"})
         }
 
 
@@ -52,6 +103,10 @@
         // ddElements.click(toggleEvent);
         onButton.click(toggleEventTwo);
         offButton.click(toggleEvent);
+        liBackGroundButton.click(changeLiBackGround);
+        h3Element.click(boldLiElements);
+        liElement.click(changeParentColor)
+
 
 
     });
