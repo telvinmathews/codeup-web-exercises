@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+<div id='map' style='width: 90vw; height: 90vh;'></div>
+<script src='./js/keys.js'></script>
+<script src="mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = mapBoxApi;
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v9',
+        zoom: 10,
+        center: [-98.4916, 29.4252]
+    });
+    var restaurants = [
+        {
+            name: 'Taco Cabana',
+            address: '13376 Research Blvd Suite 128, Austin, TX 78750'
+        },
+        {
+            name: 'Jucie Land',
+            address: '12226 Ranch Rd 620 N, Austin, TX 78750'
+        },
+        {
+            name: 'Kitchen United Mix',
+            address: '8023 Burnet Rd, Austin, TX 78723'
+        }
+    ]
+
+    restaurants.forEach(function (restaurant){
+        geocode(restaurant.address, mapBoxApi).then(function(result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(20);
+
+            var marker = new mapboxgl.Marker()
+                .setLngLat(result)
+                .addTo(map);
+
+            var popup = new mapboxgl.Popup()
+                .setLngLat([-98.489615, 29.426827])
+                .setHTML(`<p>${restaurant.name}</p>`)
+                // .addTo(map)
+
+            marker.setPopup(popup)
+        });
+    })
+
+
+
+
+</script>
+
+</body>
+</html>
