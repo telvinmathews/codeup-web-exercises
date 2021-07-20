@@ -17,7 +17,7 @@
 <nav class="navbar navbar-dark bg-primary d-flex">
 
             <a class="navbar-brand p-2" href="#">Weather App</a>
-            <a class="navbar-brand" href="#">Current city:</a></div>
+            <a class="navbar-brand current-city" href="#">Current city:</a></div>
 </nav>
 
 <div class="container ml-2 mt-2 m-0 p-0">
@@ -25,7 +25,7 @@
         <p>Place</p>
         <div class="form-group mx-sm-3 mb-2">
             <label for="location" class="sr-only">Location</label>
-            <input type="location" class="form-control" id="location" placeholder="location">
+            <input type="location" class="form-control" id="location" placeholder="location" value="">
         </div>
         <button type="submit" class="btn btn-primary mb-2">find</button>
     </form>
@@ -95,6 +95,9 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!--keys link-->
 <script src='./js/keys.js'></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="mapbox-geocoder-utils.js"></script>
+
 <script>
     "use strict";
     $(document).ready(function () {
@@ -111,7 +114,7 @@
             lat: 29.423017,
             lon: -98.48527
         }).done(function (data) {
-            console.log('5 day forecast', data);
+            // console.log('5 day forecast', data.daily[0].pressure);
             // $('#weatherDiv').append(`<p>${data.main.temp}</p>`);
         });
 
