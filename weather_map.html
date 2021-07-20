@@ -6,9 +6,9 @@
     <!--    bootstrap link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-<!--    mapbox link-->
+    <!--    mapbox link-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'/>
 </head>
 <body>
 
@@ -16,8 +16,8 @@
 
 <nav class="navbar navbar-dark bg-primary d-flex">
 
-            <a class="navbar-brand p-2" href="#">Weather App</a>
-            <a class="navbar-brand current-city" href="#">Current city:</a></div>
+    <a class="navbar-brand p-2" href="#">Weather App</a>
+    <a class="navbar-brand current-city" href="#">Current city:</a></div>
 </nav>
 
 <div class="container ml-2 mt-2 m-0 p-0">
@@ -27,76 +27,95 @@
             <label for="location" class="sr-only">Location</label>
             <input type="location" class="form-control" id="location" placeholder="location" value="">
         </div>
-        <button type="submit" class="btn btn-primary mb-2">find</button>
+        <button type="submit" id="findBtn" class="btn btn-primary mb-2">find</button>
     </form>
 </div>
-<div class="d-flex justify-content-around">
+<div id="cardContainer" class="d-flex justify-content-around">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Date</h5>
         </div>
         <img src="..." class="card-img-top" alt="...">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
         </ul>
-    </div>
-    <div class="card" style="width: 18rem;">
+    </div> <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Date</h5>
         </div>
         <img src="..." class="card-img-top" alt="...">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
         </ul>
-    </div>
-    <div class="card" style="width: 18rem;">
+    </div> <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Date</h5>
         </div>
         <img src="..." class="card-img-top" alt="...">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
         </ul>
-    </div>
-    <div class="card" style="width: 18rem;">
+    </div> <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Date</h5>
         </div>
         <img src="..." class="card-img-top" alt="...">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
         </ul>
-    </div>
-    <div class="card" style="width: 18rem;">
+    </div> <div class="card" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">Date</h5>
         </div>
         <img src="..." class="card-img-top" alt="...">
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
+        </ul>
+    </div> <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Date</h5>
+        </div>
+        <img src="..." class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Temp</li>
+            <li class="list-group-item">Description</li>
+            <li class="list-group-item">Humidity</li>
+            <li class="list-group-item">Wind</li>
+            <li class="list-group-item">Pressure</li>
         </ul>
     </div>
+
 </div>
 
 <div id='map' style='width: 100vw; height: 100vh;'></div>
 
 <!--jquery link-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossOrigin="anonymous"></script>
 <!--keys link-->
 <script src='./js/keys.js'></script>
 <!-- Mapbox Geocoder Util Methods -->
-<script src="mapbox-geocoder-utils.js"></script>
+<script src="./js/mapbox-geocoder-utils.js"></script>
 
 <script>
     "use strict";
@@ -106,17 +125,58 @@
             container: 'map',
             style: 'mapbox://styles/mapbox/streets-v11',
             zoom: 10,
-            center: [ -97.733330, 30.266666]
+            center: [-97.733330, 30.266666]
         });
 
-        $.get(`https://api.openweathermap.org/data/2.5/onecall`, {
-            appid: openWeatherApiKey,
-            lat: 29.423017,
-            lon: -98.48527
-        }).done(function (data) {
-            // console.log('5 day forecast', data.daily[0].pressure);
-            // $('#weatherDiv').append(`<p>${data.main.temp}</p>`);
-        });
+        let searchValue = $("#location").val();
+
+        function findFunction(event) {
+            event.preventDefault();
+            searchValue = $("#location").val();
+            // console.log(searchValue);
+            geocode(searchValue, mapBoxApi).then(function (geoCode) {
+                // console.log(geoCode);
+                map.setCenter(geoCode);
+                map.setZoom(10);
+                var marker = new mapboxgl.Marker()
+                    .setLngLat(geoCode)
+                    .addTo(map);
+            });
+            $.get(`https://api.openweathermap.org/data/2.5/onecall`, {
+                appid: openWeatherApiKey,
+                lat: 29.423017,
+                lon: -98.48527,
+                units: 'imperial'
+            }).done(function (data) {
+                console.log('5 day forecast', data);
+                var dateDailyList = data.daily
+                var cardHtml = ""
+                dateDailyList.slice(-5).forEach(function (dailyDay) {
+                    let date = new Date(dailyDay.dt * 1000);
+                    console.log(dailyDay)
+                    cardHtml +=
+                      `<div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">${date.toString()}</h5>
+                        </div>
+                         <img src="http://openweathermap.org/img/w/${dailyDay.weather[0].icon}.png" class="card-img-top" alt="...">
+                         <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Description: ${dailyDay.weather[0].description}</li>
+                            <li class="list-group-item">Temp: ${dailyDay.temp.day}</li>
+                            <li class="list-group-item">Humidity: ${dailyDay.humidity}</li>
+                            <li class="list-group-item">Wind: ${dailyDay.wind_speed}</li>
+                            <li class="list-group-item">Pressure: ${dailyDay.pressure}</li>
+                         </ul>
+                        </div>`
+
+                })
+
+                $("#cardContainer").html(cardHtml)
+                // $('.card-title').append(`<p>${data.main.temp}</p>`);
+            });
+        }
+        $("#findBtn").on("click", findFunction)
+
 
     })
 </script>
