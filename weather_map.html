@@ -128,11 +128,14 @@
             center: [-97.733330, 30.266666]
         });
 
+
+
         let searchValue = $("#location").val();
 
         function findFunction(event) {
             event.preventDefault();
             searchValue = $("#location").val();
+
             // console.log(searchValue);
             geocode(searchValue, mapBoxApi).then(function (geoCode) {
                 // console.log(geoCode);
@@ -155,7 +158,8 @@
                     let date = new Date(dailyDay.dt * 1000);
                     console.log(dailyDay)
                     cardHtml +=
-                      `<div class="card" style="width: 18rem;">
+                       `
+                        <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title">${date.toString()}</h5>
                         </div>
@@ -171,10 +175,13 @@
 
                 })
 
+
+
                 $("#cardContainer").html(cardHtml)
                 // $('.card-title').append(`<p>${data.main.temp}</p>`);
             });
         }
+
         $("#findBtn").on("click", findFunction)
 
 
